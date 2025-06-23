@@ -2,11 +2,10 @@
 
 This is [my Glove80] keymap featuring the [Enthium] and [Engram] layouts with
 [Miryoku]-style layers and [home row mods].  Other layouts (**QWERTY**, Dvorak,
-Colemak/DH, etc.) and familiar keys (arrows, pinky shifts, function row) are
-also provided as "training wheels" to aid your transition to the full glory.
+Colemak/DH, etc.) are also provided to ease your transition to the full glory.
 
-![Photograph of my MoErgo Glove80 keyboard with Enthium layout and per-key RGB
-illumination.](https://sunaku.github.io/moergo-glove80-keyboard-photograph.jpg)
+![Photograph of my Glove80 with Enthium layout and per-key RGB illumination.](
+README/base-layer-photograph-Enthium.jpg )
 
 [my Glove80]:    https://sunaku.github.io/moergo-glove80-keyboard.html
 [Enthium]:       https://sunaku.github.io/enthium-keyboard-layout.html
@@ -17,9 +16,9 @@ illumination.](https://sunaku.github.io/moergo-glove80-keyboard-photograph.jpg)
 
 ## Keymap
 
-Version 41 (2025-01-13)
-- Changes: https://github.com/sunaku/glove80-keymaps/releases/v41
-- Release: https://my.glove80.com/#/layout/user/593d6c43-64f6-4124-b2c9-474347d8256f
+Version 42-rc3 (PREVIEW)
+- Changes: https://github.com/sunaku/glove80-keymaps/releases/v42-rc3
+- Release: https://my.glove80.com/#/layout/user/8a2e8238-672e-4bb4-b7d3-632e38c88c61
 
 ### Legend
 
@@ -29,7 +28,7 @@ See [interactive layer map][map] for overview and documentation.
 See [release notes][rel] for a visual overview of recent updates.
 
 [map]: https://sunaku.github.io/moergo-glove80-keyboard.html#layers
-[pdf]: https://sunaku.github.io/moergo-glove80-keyboard-layers.pdf
+[pdf]: README/all-layer-diagrams.pdf
 [rel]: https://github.com/sunaku/glove80-keymaps/releases
 
 ### Contents
@@ -51,6 +50,7 @@ See [release notes][rel] for a visual overview of recent updates.
     * [OS-native compose](#os-native-compose)
 * [Installing](#installing)
   * [Enabling mouse emulation](#enabling-mouse-emulation)
+    * [Choose a firmware that supports mouse emulation](#choose-a-firmware-that-supports-mouse-emulation)
   * [Enabling per-key RGB lighting](#enabling-per-key-rgb-lighting)
   * [Flashing](#flashing)
 * [Upgrading](#upgrading)
@@ -78,6 +78,13 @@ See [release notes][rel] for a visual overview of recent updates.
 
 Welcome to the *Glorious Engrammer* keymap! 🧑‍🚀🚀✨  This introductory
 guide will orient you to the world of custom layouts, keymaps, and firmware. 💁
+
+> "Hey, I'm glad you came! Are you comfortable?" 🚁  
+> _What?_ 😯  
+> "Are you comfortable?" 😎  
+> _No_ 😰  
+> "Hold on tight..." ✨  
+> -- Walter Mitty https://vimeo.com/106472147#t=72s
 
 ### Factory layout
 
@@ -267,7 +274,7 @@ Instead, you have two options for engaging auto-repeat on dual-function keys:
 2. Using repetition access keys: first hold down a Typing layer access key and
    then hold the key you want to repeat for the desired amount of repetition.
 
-![Using repetition access keys](README/key-auto-repeat.png)
+![Using repetition access keys](README/repeat-layer-diagram.png)
 
 ### Alpha layouts
 
@@ -335,7 +342,7 @@ Open the [keymap link above](#keymap) and follow these instructions:
 4. Customize the keymap behavior in this text box.
 5. Build the firmware and download the `*.uf2` file.
 
-![instructions](https://github.com/sunaku/glove80-keymaps/assets/9863/4eeafe4c-0ab3-4900-b241-f62b0467a394)
+![installation instructions](README/installing.png)
 
 ### Enabling mouse emulation
 
@@ -352,10 +359,9 @@ then the "y" radio button.
 The default firmware (25.0.1) now supports mouse emulation, but if you still
 want to verify that you're using a firmware that supports mouse emulation then
 before building the firmware (step 5 above), change the firmware version to
-25.0.1 or newer: open the "Settings" tab, choose 24.12, and go back to the
-"Edit" tab.
+25.0.1 or newer under the "Settings" tab, and then go back to the "Edit" tab.
 
-![beta firmware](https://github.com/sunaku/glove80-keymaps/assets/26071571/25c66c06-93fe-4318-bb54-7a85e510e1fd)
+![beta firmware](README/settings.png)
 
 Alternatively, you might use the newer PR36 beta firmware for this too:
 select "community.pr36.mouse-keys" from the drop-down menu located at
@@ -368,7 +374,7 @@ Now proceed to build and flash your keymap.
 Before building the firmware (step 5 above), change the version to PR36:
 open the "Settings" tab, choose PR36, and then go back to the "Edit" tab.
 
-![beta firmware](https://github.com/sunaku/glove80-keymaps/assets/26071571/25c66c06-93fe-4318-bb54-7a85e510e1fd)
+![beta firmware](README/settings.png)
 
 Next, in the "Advanced Configuration" tab towards the bottom of the page,
 enable the `EXPERIMENTAL_RGB_LAYER` experimental setting by ticking the
@@ -431,8 +437,7 @@ you set `OPERATING_SYSTEM` to macOS, in which case Win and Ctrl are swapped.
 
 ```h
 #define PINKY_FINGER_MOD LGUI
-#define RING1_FINGER_MOD LALT
-#define RING2_FINGER_MOD RALT
+#define RINGY_FINGER_MOD LALT
 #define MIDDY_FINGER_MOD LCTL
 #define INDEX_FINGER_MOD LSFT
 ```
@@ -450,10 +455,8 @@ For completeness, here are all finger-mod settings available for customization:
 ```h
 #define  LEFT_PINKY_MOD ...
 #define RIGHT_PINKY_MOD ...
-#define  LEFT_RING1_MOD ...
-#define RIGHT_RING1_MOD ...
-#define  LEFT_RING2_MOD ...
-#define RIGHT_RING2_MOD ...
+#define  LEFT_RINGY_MOD ...
+#define RIGHT_RINGY_MOD ...
 #define  LEFT_MIDDY_MOD ...
 #define RIGHT_MIDDY_MOD ...
 #define  LEFT_INDEX_MOD ...

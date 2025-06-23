@@ -1,4 +1,4 @@
-precedence: [LSFT, LALT, RALT, LCTL, RCTL, RSFT] # latter overrides former: RSFT overrides all
+precedence: [LSFT, LALT, RALT, LCTL, RCTL, RSFT, LCTL_RSFT, RCTL_RSFT] # latter overrides former: RCTL_RSFT overrides all
 
 #
 # transforms:
@@ -9,20 +9,20 @@ precedence: [LSFT, LALT, RALT, LCTL, RCTL, RSFT] # latter overrides former: RSFT
 # Where <modifier> is either LALT, RALT, LCTL, RCTL, or RSFT.
 #
 transforms:
-  I: { base: diaeresis,   LCTL: acute, RCTL: circumflex, RSFT: grave                                 }
-  E: { base: diaeresis,   LCTL: acute, RCTL: circumflex, RSFT: grave,   LALT: oe,      RALT: ae      }
-  A: { base: diaeresis,   LCTL: acute, RCTL: circumflex, RSFT: grave,   LALT: tilde,   RALT: ring    }
-  Y: { base: diaeresis,   LCTL: acute                                                                }
-  O: { base: diaeresis,   LCTL: acute, RCTL: circumflex, RSFT: grave,   LALT: tilde,   RALT: slash   }
-  U: { base: diaeresis,   LCTL: acute, RCTL: circumflex, RSFT: grave                                 }
+  I: { base: diaeresis,   LCTL: acute, RCTL: circumflex, RSFT: grave                                                                         }
+  E: { base: diaeresis,   LCTL: acute, RCTL: circumflex, RSFT: grave,   LALT: oe,      RALT: ae,     LCTL_RSFT: oe,       RCTL_RSFT: ae      }
+  A: { base: diaeresis,   LCTL: acute, RCTL: circumflex, RSFT: grave,   LALT: tilde,   RALT: ring,   LCTL_RSFT: tilde,    RCTL_RSFT: ring    }
+  Y: { base: diaeresis,   LCTL: acute                                                                                                        }
+  O: { base: diaeresis,   LCTL: acute, RCTL: circumflex, RSFT: grave,   LALT: tilde,   RALT: slash,  LCTL_RSFT: tilde,    RCTL_RSFT: slash   }
+  U: { base: diaeresis,   LCTL: acute, RCTL: circumflex, RSFT: grave                                                                         }
   consonants:
      { base: eszett, LCTL: ntilde,    RCTL: cedilla                                                  }
   quotes_left:
-     { base: angle,   LCTL: curly,     RCTL: low,        RSFT: grave,   LALT: corner1, RALT: corner2 }
+     { base: angle,   LCTL: curly,     RCTL: low,        RSFT: grave,   LALT: corner1, RALT: corner2, LCTL_RSFT: corner1, RCTL_RSFT: corner2 }
   quotes_right:
-     { base: angle,   LCTL: curly,     RCTL: low,        RSFT: grave,   LALT: corner1, RALT: corner2 }
+     { base: angle,   LCTL: curly,     RCTL: low,        RSFT: grave,   LALT: corner1, RALT: corner2, LCTL_RSFT: corner1, RCTL_RSFT: corner2 }
   currency:
-     { base: euro,  LCTL: dollar,      RCTL: pound,      RSFT: generic, LALT: yen,     RALT: won     }
+     { base: euro,  LCTL: dollar,      RCTL: pound,      RSFT: generic, LALT: yen,     RALT: won,     LCTL_RSFT: yen    , RCTL_RSFT: won     }
   sign:
     base: copyright
     LCTL: trademark

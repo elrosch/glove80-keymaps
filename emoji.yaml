@@ -9,12 +9,11 @@ characters:
     gibbous:   { waning:  "🌖", waxing:  "🌔" }
     quarter:   { waning:  "🌗", waxing:  "🌓" }
     crescent:  { waning:  "🌘", waxing:  "🌒" }
-    stars:     { sparkle: "✨", magic:   "🪄" }
   face:
     smile:     { up:      "🙂", down:    "🙃" }
     laugh:     { joy:     "😂", rofl:    "🤣" }
     eyes:      { star:    "🤩", heart:   "😍" }
-    joke:      { wink:    "😉", tounge:  "😜" }
+    joke:      { wink:    "😉", tongue:  "😜" }
     fear:      { scared:  "😨", scream:  "😱" }
     surprise:  { shocked: "🤯", dizzy:   "😵" }
   gesture:
@@ -27,6 +26,18 @@ characters:
     point:     { up:      "☝️", you:     "🫵" }
     thumbs:    { up:      "👍", down:    "👎" }
     hands:     { up:      "🙌", clap:    "👏" }
+  theme:
+    awesome:   { sparkle: "✨", shine:   "🌟" }
+    magic:     { wand:    "🪄", wizard:  "🧙" }
+    space:     { rocket:  "🚀", suit:    "🧑‍🚀" }
+    science:   { nerd:    "🤓", uniform: "🥼" }
+    strength:  { muscle:  "💪", lifting: "🏋️" }
+    effort:    { climb:   "🧗", juggle:  "🤹" }
+    nature:    { fire:    "🔥", water:   "🌊" }
+    love:      { heart:   "❤️", face:    "🥰" }
+    party:     { tada:    "🎉", face:    "🥳" }
+    game:      { dart:    "🎯", dice:    "🎲" }
+    trend:     { up:      "📈", down:    "📉" }
 
 #
 # codepoints:
@@ -125,10 +136,10 @@ codepoints:
   person_shrugging:    "🤷"
 
   # bottom row
-  checkoff: "✅"
+  check:    "✅"
   100:      "💯"
   warning:  "⚠️"
-  x:        "❌"
+  cross:    "❌"
   question: "❓"
 
   # thumb cluster upper arc
